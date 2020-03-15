@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息推送</title>
+</head>
+<body>
+<h1>消息推送</h1>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    var content = prompt("请输入你要推送的内容", '');
+    $.post("http://127.0.0.1:9501/user/getAllUser", {content:content},function (data) {
+        alert(data)
+    });
+</script>
+</html>
